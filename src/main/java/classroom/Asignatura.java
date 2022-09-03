@@ -5,22 +5,18 @@ public class Asignatura {
     String nombre;
     String n = nombre;
     int codigoInterno;
-    int codigoExterno;
+    int codigoExterno=882;
     Tipo tipo;
 
     Asignatura() {
         this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
+
     }
 
     Asignatura(int codigoInterno,Tipo tipo) {
-        this("Sin nombre", codigoInterno, 0,tipo);
+        this("Sin nombre", codigoInterno, codigoInterno,tipo);
     }
-
-    Asignatura(int codigoExterno,Tipo tipo) {
-        this("Sin nombre", 0, codigoExterno,tipo);
-    }
-
+    
     Asignatura(String nombre, Tipo tipo) {
         this(nombre, 0, 0,tipo);
     }
@@ -41,12 +37,9 @@ public class Asignatura {
 
     void cambiarDatos(int codigoInterno) {
         this.codigoInterno = codigoInterno;
+        this.codigoExterno= codigoInterno;
     }
-
-    void cambiarDatos(int codigoExterno) {
-        this.codigoExterno = codigoExterno;
-    }
-
+    
     void cambiarDatos(String nombre) {
         this.nombre = nombre;
     }
